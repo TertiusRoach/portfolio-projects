@@ -1,0 +1,13 @@
+node_modules
+fetchjson
+types
+misc
+bin
+
+package-lock.json
+tsconfig.json
+package.json
+
+~recycle
+.cache
+.vscode
