@@ -1,0 +1,21 @@
+@import 'colors.scss';
+/*--|►| #index-body <Body> |◄|--*/
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+/*--▼ .default-body ▼--*/
+#index-body {
+  display: grid;
+  height: 100vh;
+
+  grid-template-columns: 80px repeat(10, 1fr) 80px;
+  grid-template-rows: 40px repeat(20, 1fr) 40px;
+  @media only screen and (max-width: 1920px) {
+  }
+  @media only screen and (max-width: 1366px) {
+  }
+  @media only screen and (max-width: 1024px) {
+  }
+}

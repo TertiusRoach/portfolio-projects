@@ -1,0 +1,359 @@
+:root{
+    /* Design Colors */
+    --BlueChill:#119DA4;
+    --SurfieGreen:#0C7489;
+    --Eden:#13505B;
+    --Jet:#363636;
+    --Silver:#C9C9C9;
+    --Timberwolf:#D7D9CE;
+    /* Design Colors */
+       
+    /* Generic Colors */    
+       --Black:#000000;
+       --White:#FFFFFF;
+    
+       --Green: #01b700;
+       --Pistachio: #83CE01;
+       --Yellow: #FFFA00;
+       --Supernova: #FFCF00;
+       --WebOrange: #FFA600;
+       --FlushOrange: #FF7D01;
+       --Scarlet: #FF2000;
+       --PersianRose: #F62394;
+       --PurpleHeart: #8B20BB;
+       --InternationalKleinBlue: #0024BA;
+       --Lochmara: #007AC7;
+       --Cerulean: #00B3D4;
+    /* Generic Colors */
+    }
+
+/*--▼ Navigation ▼--*/
+@media screen and (min-width: 690px){
+    nav{
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+     /* padding: (Top & Bottom) (Right & Left); */
+        padding: 0 20px;
+    }
+    #menu-button{
+        display: none;
+    }
+    nav ul{
+     /* flex: (flex-grow) (flex-shrink) (flex-basis) */
+        flex: 1 1 auto; /* https://www.youtube.com/watch?v=CFgeJq4l1YM */
+        display: flex; /* Important */
+        flex-wrap: wrap; /* Important */
+    }
+    nav ul li{
+     /* flex: (flex-grow) (flex-shrink) (flex-basis) */
+        flex: 1 0 125px; /* https://www.youtube.com/watch?v=CFgeJq4l1YM */
+    }
+    nav ul .icon{
+     /* flex: (flex-grow) (flex-shrink) (flex-basis) */
+        flex: 0 0 20px; /* https://www.youtube.com/watch?v=CFgeJq4l1YM */
+    }
+    nav ul li .link-icon{
+        color: var(--Timberwolf);
+        background: var(--Eden);
+    }
+    nav ul li .link-icon:hover{
+        background: var(--BlueChill);
+    }
+    nav ul a{
+        text-align: center;
+    }
+    nav ul li a:hover{
+        padding: 10px;
+    }
+    #navigation-top{
+        padding: 10px;
+    }
+}
+/*--▲ Navigation ▲--*/
+
+/*--▼ Skills - Flexbox ▼--*//* 
+@media screen and (min-width: 576px){
+    .skills-center{
+        max-width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .skill{
+    flex: 0 1 calc(50% - 2em);
+    }
+}
+    @media screen and (min-width: 992px){
+    .skill{
+    flex: 0 1 calc(25% - 1em);
+}
+}
+*//*--▲ Skills - Flexbox ▲--*/
+
+/*--▼ Skills - Grid ▼--*/
+@media screen and (min-width: 576px){
+    .skills-center{
+        min-width: 90vw;
+     /* margin: (Top & Bottom) (Right & Left); */
+        margin: 0 auto;
+        display: grid;
+     /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns:      1fr 1fr;
+        column-gap: 10px;
+    }
+}
+@media screen and (min-width: 992px){
+    .skills-center{
+     /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns:      1fr 1fr 1fr 1fr;
+    }
+}
+/*--▲ Skills - Grid ▲--*/
+
+/*--▼ About - Flexbox ▼--*//*
+@media screen and (min-width: 776px){
+    #about{
+        display: flex;
+    }
+    #about-text{
+        min-height: 40vh;
+        flex: 0 0 60%;
+    }
+    #about-video{
+        min-height: 40vh;
+        flex: 0 0 40%;
+    }
+}
+*//*--▲ About - Flexbox ▲--*/
+
+/*--▼ About - Grid ▼--*/
+@media screen and (min-width:992px){
+    #about{
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    #about-text,
+    #about-video{
+        min-height: 40vh;
+    }
+}
+/*--▲ About - Grid ▲--*/
+
+/*--▼ Single Services - Flexbox ▼--*//*
+@media screen and (min-width:576px){
+    .services-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .service{
+        flex: 0 0 calc(50% - 1em);
+    }
+}
+@media screen and (min-width:972px){
+    .service{
+        flex: 0 0 calc(33.3% - 1em);
+    }
+}
+*//*--▲ Single Services - Flexbox ▲--*/
+
+/*--▼ Single Services - Grid ▼--*/
+@media screen and (min-width:576px){
+    .services-center{
+        display: grid;
+     /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
+    }
+}
+@media screen and (min-width:992px){
+    .services-center{
+     /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/*--▲ Single Services - Grid ▲--*/
+
+/*--▼ Portfolio - Flexbox ▼--*//*
+@media screen and (min-width:576px){
+    .portfolio-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .work{
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+@media screen and (min-width:776px){
+    .work{
+        flex: 0 0 calc(33.3% - 15px);
+    }
+}
+*//*--▲ Portfolio - Flexbox ▲--*/
+/*--▼ Portfolio - Grid ▼--*/
+@media screen and (min-width:576px){
+    .portfolio-center{
+        display: grid;
+     /* grid-template-columns: repeat (2, 1fr); */
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
+    }
+}
+@media screen and (min-width:992px){
+    .portfolio-center{
+     /* grid-template-columns: repeat (3, 1fr); */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/*--▲ Portfolio - Grid ▲--*/
+
+/*--▼ Numbers - Flexbox ▼--*//*
+@media screen and (min-width:576px){
+    .numbers-center{
+        min-width: 90vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .number{
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+@media screen and (min-width:992px){
+    .number{
+        flex: 0 0 calc(25% - 10px);
+    }
+}
+*//*--▲ Numbers - Flexbox ▲--*/
+/*--▼ Numbers - Grid ▼--*/
+@media screen and (min-width:576px){
+    .numbers-center{
+        display: grid;
+     /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+}
+@media screen and (min-width:992px){
+    .numbers-center{
+        display: grid;
+     /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+/*--▲ Numbers - Grid ▲--*/
+
+/*--▼ Team - Flexbox ▼--*//*
+@media screen and (min-width:576px){
+    #team-center{
+        min-width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .team-member{
+        flex: 0 0 calc(50%  - 10px);
+    }
+}
+@media screen and (min-width:776px){
+    .team-member{
+        flex: 0 0 calc(25%  - 10px);
+    }
+}
+*//*--▲ Team - Flexbox ▲--*/
+/*--▼ Team - Grid ▼--*/
+@media screen and (min-width:576px){
+    #team-center{
+        min-width: 90vw;
+     /* margin: (Top & Bottom) (Right & Left); */
+        margin: 0 auto;
+        display: grid;
+     /* grid-template-columns: repead(2, 1fr); */
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
+    }
+}
+@media screen and (min-width:992px){
+    #team-center{
+        min-width: 90vw;
+     /* margin: (Top & Bottom) (Right & Left); */
+        margin: 0 auto;
+        display: grid;
+     /* grid-template-columns: repead(4, 1fr); */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 1em;
+    }
+}
+/*--▲ Team - Grid ▲--*/
+
+/*--▼ Customers - Flexbox ▼--*//*
+@media screen and (min-width:576px){
+    .customers-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .customer {
+        flex: 0 0 calc(33.3% - 1em);
+    }
+}
+*//*--▲ Customers - Flexbox ▲--*/
+/*--▼ Customers - Grid ▼--*/
+@media screen and (min-width:576px){
+    .customers-center{
+        display: grid;
+     /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1em;
+    }
+}
+/*--▲ Customers - Grid ▲--*/
+
+/*--▼ Contact Form - Flexbox ▼--*//*
+@media screen and (min-width:776px){
+    .contact-center{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    #company-info{
+        flex: 0 0 calc(50% - 10px);
+    }
+    #customer-info{
+
+    }
+}
+*//*--▲ Contact Form - Flexbox ▲--*/
+/*--▼ Contact Form - Grid ▼--*/
+@media screen and (min-width:776px){
+    .contact-center{
+        display: grid;
+     /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
+    }
+}
+/*--▲ Contact Form - Grid ▲--*/
+
+
+
+
+
+
+
+
+
+
+
+/*--▼ Seperation Example - Flexbox ▼--*/
+/*--▲ Seperation Example - Flexbox ▲--*/
+
+/* padding: (Top & Bottom) (Right & Left); */
+/* margin: (Top & Bottom) (Right & Left); */
+
+/* padding: Top Right Bottom Left; */
+/* margin: Top Right Bottom Left; */

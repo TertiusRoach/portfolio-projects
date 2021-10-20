@@ -1,0 +1,17 @@
+@import 'colors.scss';
+/*--|►| #index-main <Main> |◄|--*/
+/*--▼ .default-main ▼--*/
+#index-main {
+  grid-column: 1/13;
+  grid-row: 2/23;
+
+  display: inherit;
+  grid-template-columns: 80px 1fr 1rem 1fr 1rem 1fr 1rem 1fr 80px;
+  grid-template-rows: repeat(19, 1fr) 40px;
+  @media only screen and (max-width: 1920px) {
+  }
+  @media only screen and (max-width: 1366px) {
+  }
+  @media only screen and (max-width: 1024px) {
+  }
+}

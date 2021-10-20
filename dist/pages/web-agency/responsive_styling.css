@@ -1,0 +1,112 @@
+:root{
+/*--▼ Design Colors ▼--*/
+--Apricot: #EF946C;
+--SorrelBrown: #C4A77D;
+--BlueSmoke: #70877F;
+--EastBay: #454372;
+--Jacarta: #2F2963;
+/*--▲ Design Colors ▲--*/
+   
+/*--▼ Generic Colors ▼--*/    
+    --Black:#000000;
+    --White:#FFFFFF;
+
+    --Green: #01b700;
+    --Pistachio: #83CE01;
+    --Yellow: #FFFA00;
+    --Supernova: #FFCF00;
+    --WebOrange: #FFA600;
+    --FlushOrange: #FF7D01;
+    --Scarlet: #FF2000;
+    --PersianRose: #F62394;
+    --PurpleHeart: #8B20BB;
+    --InternationalKleinBlue: #0024BA;
+    --Lochmara: #007AC7;
+    --Cerulean: #00B3D4;
+/*--▲ Generic Colors ▲--*/
+}
+
+@media screen and (min-width:576px){
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    nav ul li {
+        /* flex: (flex-grow) (flex-shrink) (flex-basis) */
+        flex: 1 0 auto; /* https://www.youtube.com/watch?v=CFgeJq4l1YM */
+        /* flex-grow: 1; */
+        /* flex-shrink: 0; */
+        /* flex-basis: auto; */
+    }
+    .logo{
+        display: block;
+        text-align: center;
+    }
+    .logo .fa{
+        display: none;
+    }
+}
+@media screen and (min-width:576px){
+    .skills-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+}
+@media screen and (min-width:992px){
+    .skills-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+    }
+}
+@media screen and (min-width:776px){
+    .services-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .services-container .service-item:nth-of-type(1){
+        order: 1
+    }
+    .services-container .service-item:nth-of-type(2){
+        order: 2
+    }
+    .services-container .service-item:nth-of-type(3){
+        order: 4
+    }
+    .services-container .service-item:nth-of-type(4){
+        order: 3
+    }
+}
+@media screen and (min-width:576px){
+    .projects-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+}
+@media screen and (min-width:992px){
+    .projects-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+@media screen and (min-width:576px){
+    .post-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
+}
+@media screen and (min-width:992px){
+    .post-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
+}

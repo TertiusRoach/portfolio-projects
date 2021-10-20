@@ -1,0 +1,335 @@
+:root{
+/*--▼ Design Colors ▼--*/
+    --CornField:#F4F7BE;/*--► rgba(244, 247, 190, 1) ◄--*/
+    --Mindaro:#E5F77D;/*--► rgba(229, 247, 125, 1) ◄--*/
+    --Apache:#DEBA6F;/*--► rgba(222, 186, 111, 1) ◄--*/
+    --SolidPink:#823038;/*--► rgba(130, 48, 56, 1) ◄--*/
+    --Diesel:#1E000E;/*--► rgba(30, 0, 14, 1) ◄--*/
+
+    --Black:#000000;/*--► rgba(0, 0, 0, 1) ◄--*/
+    --White:#FFFFFF;/*--► rgba(255, 255, 255, 1) ◄--*/
+/*--▲ Design Colors ▲--*/
+}
+    
+/*--|▼| Global Styling |▼|--*/
+*{
+    font-family: 'Quicksand', Arial, Helvetica;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--CornField);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/*--|▲| Global Styling |▲|--*/
+/*--|▼| Side Navigation |▼|--*/
+.logo-container{
+    padding: 0 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    background: var(--Mindaro);
+}
+.logo-container img{
+    width: 100px;
+}
+.side-btn{
+    align-self: center;
+    border: 3px solid var(--SolidPink);
+    cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3{
+    width: 30px;
+    height: 4px;
+    margin: 6px 5px;
+    background: var(--SolidPink);
+    transition: 0.5s ease;
+}
+
+.change .bar1{/*--► Added with jQuery ◄--*/
+    transform: rotate(-45deg) translate(-7px,6px);
+}
+.change .bar2{/*--► Added with jQuery ◄--*/
+    opacity: 0;
+}
+.change .bar3{/*--► Added with jQuery ◄--*/
+    transform: rotate(45deg) translate(-7px,-8px);
+}
+
+.side-nav-links{
+    list-style-type: none;
+    display: block;
+}
+.side-nav-links li:first-of-type{/*--► https://www.w3schools.com/cssref/sel_nth-last-of-type.asp ◄--*/
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.side-nav-links a{
+    display: block;
+    padding: 5px 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--Diesel);
+    transition: .5s ease;
+}
+.side-nav-links a:hover{
+    background: rgba(30, 0, 14, .75);/*--► var(--Diesel) ◄--*/
+    color: rgba(229, 247, 125, 1);/*--► var(--Mindaro) ◄--*/
+    padding-left: 30px;
+}
+.side-nav-links span{
+    font-size: 20px;
+    margin-right: 10px;
+    color: var(--SolidPink);
+}
+.side-nav-links li:hover [class*='fa-']{
+    transition: 1s ease;
+    color: var(--Mindaro);
+}
+.side-nav-links{
+    display: none;
+}
+/*--|▲| Side Navigation |▲|--*/
+/*--|▼| Main Section |▼|--*/
+.nav-top{
+    height: 109px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 5px solid var(--Apache);
+}
+.nav-btn{
+    border: 3px solid var(--SolidPink);
+    cursor: pointer;
+    display: none;
+    margin: 0 20px;
+}
+.chevron-icons a{
+    font-size: 30px;
+    margin: 10px;
+}
+.nav-img{
+    display: flex;
+}
+.nav-top img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-self: center;
+}
+.nav-img h3{
+    align-self: center;
+    color: var(--SolidPink);
+    font-size: 25px;
+}
+.nav-top a{
+    color: var(--SolidPink);
+}
+.nav-top input{
+    font-size: 16px;
+    border: 2px solid var(--SolidPink);
+    padding: 5px;
+}
+.nav-top input::placeholder{
+    color: var(--SolidPink);
+}
+.sign-out{
+    font-size: 25px;    
+}
+.sign-out{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+main{
+    height: 100%;
+    flex: 1 0 auto;/*--► 0 = Do not grow or shrink ◄--*/
+    text-transform: capitalize;
+}
+
+@media screen and (min-width:776px){
+    .side-nav-links{
+        display: block!important;
+    }
+    .side-btn{
+        display: none;
+    }
+    .nav-btn{
+        display: block;
+    }
+    body{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+    }
+    .side-nav{
+        flex: 0 0 20%;        
+        min-height: 100vh;
+        background: var(--Apache);
+    }
+    main{
+        flex: 0 0 80%;
+        display: flex;
+        flex-direction: column;
+        max-width: 79vw!important;
+    }
+    .logo-container{
+        justify-content: center;
+    }
+    .margin{
+        margin-left: -20%;
+    }
+}
+
+.side-nav{
+    transition: 1s ease;
+}
+.max-width{
+    max-width: 98vw!important;
+    padding: 0 20px;
+}
+/*--|▲| Main Section |▲|--*/
+/*--|▼| Song List Section |▼|--*/
+.song-list{
+    padding: 20px;
+    width: 100%;
+}
+.list-item{
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+.list-item img{
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.list-item-icon span{
+    color: var(--SolidPink)
+}
+.list-item-text h3{
+    text-transform: capitalize;
+}
+.list-item-text h4{
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+@media screen and (min-width:576px){
+    .song-list-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+/*--|▲| Song List Section |▲|--*/
+/*--|▼| Songs Section |▼|--*/
+.songs{
+    padding: 40px 0;
+}
+.songs h1{
+    text-transform: uppercase;
+    margin: 0 0 20px 20px;
+}
+.song{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.song h3{
+    text-transform: capitalize;
+}
+.song h4{
+    margin: 10px 0;
+    text-transform: capitalize;
+    color: var(--SolidPink);
+}
+.song-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.song img{
+    display: block;
+    width: 100%!important;
+    transition: 1s ease;
+}
+.song img:hover{
+    opacity: 0.75;
+    transform: scale(1.1);
+}
+.song-icon{
+    font-size: 30px;
+    padding: 10px;
+    display: inline-block;
+    color: var(--SolidPink);
+    border: 2px solid var(--Diesel);
+    border-radius: 25%;
+    cursor: pointer;
+    transition: 2s ease;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.song-icon:hover{
+    color: var(--Apache);
+    border-color: var(--Apache);
+    background: var(--Diesel);
+}
+.song-container:hover .song-icon{
+    opacity: 1;
+}
+
+.owl-theme .owl-nav{
+    margin-top: -25px;
+}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next{
+    color: var(--SolidPink);
+}
+/*--|▲| Songs Section |▲|--*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--|▼| Description |▼|--*/
+/*--|▲| Description |▲|--*/
+
+/*--▼ Note to Self ▼--*/
+/*--► Note to Self ◄--*/

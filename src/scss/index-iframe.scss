@@ -1,0 +1,18 @@
+@import 'colors.scss';
+/*--|►| #index-iframe <div> |◄|--*/
+/*--▼ .default-iframe ▼--*/
+#index-iframe {
+  grid-column: 2/9;
+  grid-row: 5/19;
+
+  display: flex;
+  width: 143%;
+  border-top: solid 4px $primary-dark;
+  border-bottom: solid 4px $primary-dark;
+  @media only screen and (max-width: 1920px) {
+  }
+  @media only screen and (max-width: 1366px) {
+  }
+  @media only screen and (max-width: 1024px) {
+  }
+}
