@@ -1,7 +1,7 @@
 # Portfolio Projects
-## This is the result of Udemy courses over a year: HTML, CSS &amp; JavaScript projects where code is copied before grasping it.
+## This is the result of Udemy courses over a year: HTML, CSS & JavaScript projects where code is copied before grasping it. We all have to start somewhere and what better place to start than with the one no browser can live without.
 ---
-  # We all have to start somewhere and what better place to start than with the one no browser can live without: HTML & CSS.
+  # HTML & CSS
   ## Links to Static Projects
   https://arthomes.co.za/
   
@@ -19,7 +19,7 @@
   
   https://tertiusroach.github.io/portfolio-projects/dist/pages/web-agency/web_agency.html
   
-  # We all have to start somewhere and what better place to start than with the one no browser can live without: HTML & CSS.
+  # JavaScript
   ## Links to Applications
   https://tertiusroach.github.io/portfolio-projects/dist/pages/bankist-app/bankist_app.html
   
